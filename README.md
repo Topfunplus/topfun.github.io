@@ -1,29 +1,19 @@
-# untitled5
+# @babel/parser
 
-This template should help get you started developing with Vue 3 in Vite.
+> A JavaScript parser
 
-## Recommended IDE Setup
+See our website [@babel/parser](https://babeljs.io/docs/en/babel-parser) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20parser%20(babylon)%22+is%3Aopen) associated with this package.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Install
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+Using npm:
 
 ```sh
-npm install
+npm install --save-dev @babel/parser
 ```
 
-### Compile and Hot-Reload for Development
+or using yarn:
 
 ```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+yarn add @babel/parser --dev
 ```
