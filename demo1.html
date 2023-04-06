@@ -1,0 +1,87 @@
+<!-- 图片切换案例 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sized{
+        width: 300px;
+        height: 400px;
+
+    }
+    .back{
+        background-color: pink;
+    }
+    .sized1{
+        width: 100px;
+        height: 100px;
+    }
+    #demo1{
+        border: palegoldenrod solid 60px;
+    }
+</style>
+<body class="back">
+<div id="app" style="border: #2c3e50 solid">
+        <div style="text-align: center">
+            <img :src="imgArray[index]" class="sized" id="demo1">
+            <!--    <input type="button" value="＜">-->
+            <!--    <input type="button" value="＜">-->
+            <!--    <input type="button" value="＞" >-->
+            <br>
+            <img src="/src/assets/123.png">
+            <br>
+            <img src="/src/assets/28309e985e2fbfeec5308a279cf79be8.jpg" class="sized1"
+                 v-on:click="pre">
+            <img src="/src/assets/OIP-C.jpg" class="sized1" v-on:click="after">
+        </div>
+    </div>
+</body>
+
+
+
+<!-- vue依赖 -->
+<script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+
+<!-- vue实例 -->
+<script>
+    var app = new Vue({
+        el: "#app",
+
+        data: {
+            index: 0,
+            imgArray: [
+                "/src/assets/6A6BCF98813E15B18DADDBC366D5714C.jpg",
+                "/src/assets/A72B614CE22DF14832048E9F7D88D583.jpg"
+            ]
+        },
+        methods: {
+            pre: function() {
+                //this.index--;
+                if(this.index > 0){
+                    this.index--;
+                }else {
+                    alert("宝贝 没有啦~");
+                }
+            },
+            after: function() {
+               // this.index++;
+                if(this.index < 1){
+                    this.index++;
+                }else{
+                    alert("宝贝 没有啦");
+                }
+            }
+        },
+
+    })
+</script>
+
+</html>
